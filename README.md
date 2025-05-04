@@ -1,1 +1,138 @@
 # Siswa-pkl
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Nilai Komponen Normatif</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 900px;
+    }
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .info {
+      margin: 20px 0;
+    }
+    .info label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .info input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-top: 20px;
+      color: white;
+    }
+    th, td {
+      border: 1px solid white;
+      padding: 10px;
+      text-align: center;
+    }
+    .signature {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .signature div {
+      width: 45%;
+      margin-top: 10px;
+    }
+    .signature input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>DAFTAR NILAI</h2>
+    <h3>KOMPONEN NORMATIF PKL</h3>
+
+    <div class="info">
+      <label for="nama">Nama Siswa:</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama siswa">
+
+      <label for="industri">Industri / Dunia Usaha:</label>
+      <input type="text" id="industri" name="industri" placeholder="Masukkan nama industri">
+
+      <label for="kompetensi">Kompetensi Keahlian:</label>
+      <input type="text" id="kompetensi" name="kompetensi" placeholder="Masukkan kompetensi keahlian">
+
+      <label for="tahun">Tahun Pelajaran:</label>
+      <input type="text" id="tahun" name="tahun" placeholder="Masukkan tahun pelajaran">
+    </div>
+
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Komponen</th>
+        <th>Nilai Angka</th>
+      </tr>
+      <tr><td>1</td><td>Disiplin</td><td>99</td></tr>
+      <tr><td>2</td><td>Sikap</td><td>98</td></tr>
+      <tr><td>3</td><td>Kerajinan</td><td>88</td></tr>
+      <tr><td>4</td><td>Kerapihan</td><td>90</td></tr>
+      <tr><td>5</td><td>Kerjasama</td><td>90</td></tr>
+      <tr><td>6</td><td>Tanggung Jawab</td><td>70</td></tr>
+      <tr>
+        <td colspan="2"><strong>Jumlah</strong></td><td><strong>535</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Rata-rata</strong></td><td><strong>89.2</strong></td>
+      </tr>
+    </table>
+
+    <div class="signature">
+      <div>
+        <label for="tanggal">Tanggal & Tempat:</label>
+        <input type="text" id="tanggal" placeholder="Contoh: Subahuni, 28 Maret 2025">
+        <p>Pembimbing Industri</p>
+        <br><br>
+        <p><u>Dedi Abdulloh</u></p>
+        <p>NIP. 024128765</p>
+      </div>
+      <div>
+        <p>Mengetahui,</p>
+        <p>Kepala Sekolah</p>
+        <br><br>
+        <p><u>Drs. Vickel Shafik</u></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
