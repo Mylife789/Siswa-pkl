@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Nilai Siswa PKL</title>
+  <style>
+    body {
+      font-family: "Times New Roman", sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-container {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #b30000;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #b30000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #800000;
+    }
+    p {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Daftar Nilai Siswa PKL</h1>
+
+<div class="form-container">
+  <form id="formNilai">
+
+    <div class="form-group">
+      <label for="nama">Nama Siswa:</label>
+      <input type="text" id="nama" required>
+    </div>
+
+    <div class="form-group">
+      <label for="instansi">Nama Industri/Instansi:</label>
+      <input type="text" id="instansi" required>
+    </div>
+
+    <div class="form-group">
+      <label for="kompetensi">Kompetensi Keahlian:</label>
+      <select id="kompetensi" required>
+        <option value="TKJ">Teknik Komputer dan Jaringan</option>
+        <option value="RPL">Rekayasa Perangkat Lunak</option>
+        <option value="TKRO">Teknik Kendaraan Ringan</option>
+        <option value="TBSM">Teknik Sepeda Motor</option>
+      </select>
+    </div>
+
+    <p>Daftar Nilai:</p>
+
+    <div class="form-group">
+      <label for="sikap">Sikap:</label>
+      <select id="sikap" required>
+        <option value="A">A (90-98)</option>
+        <option value="B">B (80-88)</option>
+        <option value="C">C (70-75)</option>
+      </select>
+    </div>
+
+    <!-- Tambahkan nilai lain sesuai keperluan -->
+
+    <div class="form-group">
+      <p>Jumlah Nilai: <span id="jumlah">0</span></p>
+      <p>Rata-rata: <span id="rata-rata">0</span></p>
+    </div>
+
+    <button type="button" onclick="hitungNilai()">Kirim dan Hitung</button>
+
+  </form>
+</div>
+
+<script>
+function hitungNilai() {
+  var nilaiA = 90;
+  var nilaiB = 80;
+  var nilaiC = 70;
+
+  function getNilai(n) {
+    if (n === "A") return nilaiA;
+    if (n === "B") return nilaiB;
+    return nilaiC;
+  }
+
+  var nilaiSikap = document.getElementById("sikap").value;
+  
+  // Kalau tambah lebih banyak nilai, tinggal tambah di sini
+  var jumlah = getNilai(nilaiSikap);
+  var rataRata = jumlah / 1; // dibagi 1, karena baru 1 nilai
+
+  document.getElementById("jumlah").innerText = jumlah;
+  document.getElementById("rata-rata").innerText = rataRata.toFixed(2);
+}
+</script>
+
+</body>
+</html>
