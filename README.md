@@ -1,5 +1,5 @@
-# Siswa-pkl
-# Siswa-pkl
+# siswa-pkl
+# siswa-pkl
 
 Proyek web sederhana untuk menampilkan nilai komponen normatif siswa.
 
